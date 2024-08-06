@@ -1,5 +1,3 @@
-[rule]
-
 # 百度网盘相关域名
 HOST-SUFFIX,baidupcs.com,Proxy
 HOST-SUFFIX,baidupcs.com.cn,Proxy
@@ -17,5 +15,3 @@ IP-CIDR,180.97.106.0/24,Proxy
 HOST-SUFFIX,bdstatic.com,Proxy
 HOST-SUFFIX,baidustatic.com,Proxy
 
-# 其他默认规则
-FINAL,DIRECT
