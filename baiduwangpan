@@ -1,0 +1,21 @@
+[rule]
+
+# 百度网盘相关域名
+HOST-SUFFIX,baidupcs.com,Proxy
+HOST-SUFFIX,baidupcs.com.cn,Proxy
+HOST-SUFFIX,pcs.baidu.com,Proxy
+HOST-SUFFIX,pan.baidu.com,Proxy
+HOST-SUFFIX,yun.baidu.com,Proxy
+HOST-SUFFIX,cloud.baidu.com,Proxy
+HOST-SUFFIX,pan.baiduyun.com,Proxy
+
+# IP段规则（可选，针对百度网盘的特定IP段）
+IP-CIDR,103.235.46.0/24,Proxy
+IP-CIDR,180.97.106.0/24,Proxy
+
+# 其他可能的相关域名（根据实际情况添加）
+HOST-SUFFIX,bdstatic.com,Proxy
+HOST-SUFFIX,baidustatic.com,Proxy
+
+# 其他默认规则
+FINAL,DIRECT
