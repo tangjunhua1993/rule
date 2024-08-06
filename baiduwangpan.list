@@ -14,4 +14,3 @@ IP-CIDR,180.97.106.0/24,Proxy
 # 其他可能的相关域名（根据实际情况添加）
 HOST-SUFFIX,bdstatic.com,Proxy
 HOST-SUFFIX,baidustatic.com,Proxy
-
