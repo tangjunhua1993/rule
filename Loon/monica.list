@@ -1,0 +1,3 @@
+[Rule]
+DOMAIN-SUFFIX,monica.im,PROXY
+DOMAIN-SUFFIX,mintlify.com,PROXY
