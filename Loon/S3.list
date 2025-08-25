@@ -1,1 +1,2 @@
-DOMAIN,fs.dig.kso.net,PROXY
+DOMAIN,fs.dig.kso.net,DIRECT
+DOMAIN,fs.wps.kingsoft,DIRECT
