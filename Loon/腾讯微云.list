@@ -1,0 +1,19 @@
+# =========================
+# Tencent WeiYun (微云) - Loon Rules
+# Policy: DIRECT（如需走代理，把 DIRECT 改成你的策略组名）
+# =========================
+
+# 1) 微云主站 / 网盘 / 分享（核心）
+DOMAIN-SUFFIX,weiyun.com,DIRECT
+
+# 2) 企业微云（常见入口在 weiyun.qq.com）
+DOMAIN-SUFFIX,weiyun.qq.com,DIRECT
+
+# 3) 微云下载/存储常见域名（接口返回的下载 host 常见形态：*.yun.ftn.qq.com）
+DOMAIN-SUFFIX,yun.ftn.qq.com,DIRECT
+
+# 4) 微云相关 OpenAPI（用 URL-REGEX 精准命中 /weiyun/ 路径，避免误伤 graph.qq.com 其它业务）
+URL-REGEX,^https?:\/\/graph\.qq\.com\/weiyun\/,DIRECT
+
+# 5)（可选）如果你明确抓包/日志里看到 openapi.qzone.qq.com 参与微云流程，再打开这一条
+# URL-REGEX,^https?:\/\/openapi\.qzone\.qq\.com\/.*weiyun,Direct
