@@ -1,0 +1,35 @@
+# NAME: Claude
+# AUTHOR: Sisyphus (generated for tangjunhua1993/rule)
+# REPO: https://github.com/tangjunhua1993/rule
+# UPDATED: 2026-04-19
+# DESCRIPTION: Route Claude / Anthropic related hosts through proxy. Keep broad CDN rules commented to avoid proxying unrelated traffic.
+# DOMAIN: 4
+# DOMAIN-SUFFIX: 4
+# TOTAL: 8
+
+# Anthropic / Claude core
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN,api.anthropic.com
+DOMAIN,console.anthropic.com
+
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN,platform.claude.com
+
+# Common analytics/cdn observed in some setups (kept, originally present)
+DOMAIN,cdn.usefathom.com
+
+# ---------------------------
+# Optional / CAUTION:
+# Uncomment only when you have verified Claude uses these exact subdomains.
+# Broad cloud/CDN suffixes will route a lot of non-claude traffic through your proxy.
+# ---------------------------
+# DOMAIN-SUFFIX,cloudfront.net
+# DOMAIN-SUFFIX,amazonaws.com
+# DOMAIN-SUFFIX,cdn.cloudflare.net
+# DOMAIN-SUFFIX,googleusercontent.com
+
+# NOTES:
+# - After deploying this, open browser DevTools while using Claude (web/console) and add any missing hosts you observe to this list.
+# - Prefer exact DOMAIN or DOMAIN-SUFFIX entries for specific subdomains rather than broad cloud/CDN wildcard rules.
