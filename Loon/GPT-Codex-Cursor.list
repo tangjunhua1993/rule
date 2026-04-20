@@ -1,12 +1,13 @@
-# NAME: GPT-Codex-Cursor
+# NAME: GPT-Codex-Cursor-Gemini
 # AUTHOR: tangjunhua1993
 # REPO: https://github.com/tangjunhua1993/rule
 # UPDATED: 2026-04-20
-# DESCRIPTION: Route GPT, ChatGPT, Codex, OpenAI API, and Cursor web/app/CLI hosts through SG policy group.
+# DESCRIPTION: Route GPT, ChatGPT, Codex, OpenAI API, Cursor, Gemini, Google AI Studio, and Gemini CLI hosts through SG policy group.
 # POLICY: SG
-# DOMAIN: 36
-# DOMAIN-SUFFIX: 25
-# TOTAL: 61
+# DOMAIN: 59
+# DOMAIN-SUFFIX: 28
+# DOMAIN-KEYWORD: 1
+# TOTAL: 88
 
 # OpenAI / ChatGPT / Codex core
 DOMAIN-SUFFIX,openai.com,SG
@@ -55,6 +56,41 @@ DOMAIN,humb.apple.com,SG
 DOMAIN,o207216.ingest.sentry.io,SG
 DOMAIN,o33249.ingest.sentry.io,SG
 DOMAIN,rum.browser-intake-datadoghq.com,SG
+
+# Gemini / Google AI web apps
+DOMAIN,gemini.google.com,SG
+DOMAIN,bard.google.com,SG
+DOMAIN,aistudio.google.com,SG
+DOMAIN,ai.google.dev,SG
+DOMAIN,makersuite.google.com,SG
+DOMAIN,alkalicore-pa.clients6.google.com,SG
+DOMAIN,alkalimakersuite-pa.clients6.google.com,SG
+
+# Gemini API / Google AI for Developers
+DOMAIN,generativelanguage.googleapis.com,SG
+DOMAIN-SUFFIX,generativelanguage.googleapis.com,SG
+DOMAIN,content-generativelanguage.googleapis.com,SG
+DOMAIN,apis.google.com,SG
+
+# Gemini CLI / Gemini Code Assist / Vertex AI auth and backend
+DOMAIN,cloudcode-pa.googleapis.com,SG
+DOMAIN,cloudaicompanion.googleapis.com,SG
+DOMAIN,oauth2.googleapis.com,SG
+DOMAIN,accounts.google.com,SG
+DOMAIN,www.googleapis.com,SG
+DOMAIN,iamcredentials.googleapis.com,SG
+DOMAIN,sts.googleapis.com,SG
+DOMAIN,cloudresourcemanager.googleapis.com,SG
+DOMAIN,serviceusage.googleapis.com,SG
+DOMAIN,aiplatform.googleapis.com,SG
+DOMAIN-KEYWORD,-aiplatform.googleapis.com,SG
+
+# Gemini app assets, uploads, and app telemetry
+DOMAIN-SUFFIX,gstatic.com,SG
+DOMAIN-SUFFIX,googleusercontent.com,SG
+DOMAIN,firebaseinstallations.googleapis.com,SG
+DOMAIN,firebaselogging.googleapis.com,SG
+DOMAIN,play.googleapis.com,SG
 
 # Cursor core
 DOMAIN-SUFFIX,cursor.com,SG
