@@ -1,0 +1,53 @@
+# NAME: GPT-Codex-Cursor
+# AUTHOR: tangjunhua1993
+# REPO: https://github.com/tangjunhua1993/rule
+# UPDATED: 2026-04-20
+# DESCRIPTION: Route GPT, Codex, and Cursor related hosts through SG policy group.
+# POLICY: SG
+# DOMAIN: 22
+# DOMAIN-SUFFIX: 18
+# TOTAL: 40
+
+# OpenAI / ChatGPT / Codex
+DOMAIN-SUFFIX,openai.com,SG
+DOMAIN-SUFFIX,chatgpt.com,SG
+DOMAIN-SUFFIX,oaistatic.com,SG
+DOMAIN-SUFFIX,oaiusercontent.com,SG
+DOMAIN-SUFFIX,openaimerge.com,SG
+DOMAIN-SUFFIX,auth.openai.com,SG
+DOMAIN-SUFFIX,featuregates.org,SG
+DOMAIN-SUFFIX,statsig.com,SG
+DOMAIN-SUFFIX,statsigapi.net,SG
+DOMAIN-SUFFIX,intercom.io,SG
+DOMAIN-SUFFIX,intercomcdn.com,SG
+DOMAIN-SUFFIX,workos.com,SG
+DOMAIN-SUFFIX,workoscdn.com,SG
+DOMAIN,api.openai.com,SG
+DOMAIN,chat.openai.com,SG
+DOMAIN,chatgpt.com,SG
+DOMAIN,desktop.chat.openai.com,SG
+DOMAIN,ios.chat.openai.com,SG
+DOMAIN,android.chat.openai.com,SG
+DOMAIN,cdn.oaistatic.com,SG
+DOMAIN,files.oaiusercontent.com,SG
+DOMAIN,cdn.openaimerge.com,SG
+DOMAIN,challenges.cloudflare.com,SG
+DOMAIN,events.statsigapi.net,SG
+DOMAIN,js.intercomcdn.com,SG
+DOMAIN,js.stripe.com,SG
+DOMAIN,setup.workos.com,SG
+DOMAIN,forwarder.workos.com,SG
+
+# Cursor
+DOMAIN-SUFFIX,cursor.com,SG
+DOMAIN-SUFFIX,cursor.sh,SG
+DOMAIN-SUFFIX,cursor-cdn.com,SG
+DOMAIN-SUFFIX,cursorapi.com,SG
+DOMAIN-SUFFIX,todesktop.com,SG
+DOMAIN,api2.cursor.sh,SG
+DOMAIN,api3.cursor.sh,SG
+DOMAIN,api4.cursor.sh,SG
+DOMAIN,api5.cursor.sh,SG
+DOMAIN,repo42.cursor.sh,SG
+DOMAIN,marketplace.cursorapi.com,SG
+DOMAIN,download.todesktop.com,SG
