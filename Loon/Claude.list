@@ -2,11 +2,11 @@
 # AUTHOR: tangjunhua1993
 # REPO: https://github.com/tangjunhua1993/rule
 # UPDATED: 2026-04-20
-# DESCRIPTION: Route Claude / Anthropic related hosts through US policy group.
+# DESCRIPTION: Route Claude / Anthropic related web, app, API, auth, and support hosts through US policy group.
 # POLICY: US
-# DOMAIN: 3
-# DOMAIN-SUFFIX: 4
-# TOTAL: 7
+# DOMAIN: 10
+# DOMAIN-SUFFIX: 9
+# TOTAL: 19
 
 # Anthropic / Claude core
 DOMAIN-SUFFIX,anthropic.com,US
@@ -14,7 +14,21 @@ DOMAIN-SUFFIX,claude.ai,US
 DOMAIN-SUFFIX,claude.com,US
 DOMAIN-SUFFIX,claudeusercontent.com,US
 
-# Claude web / console entrypoints
+# Claude web / console / API entrypoints
 DOMAIN,api.anthropic.com,US
 DOMAIN,console.anthropic.com,US
 DOMAIN,platform.claude.com,US
+DOMAIN,claude.ai,US
+DOMAIN,claude.com,US
+DOMAIN,app.claude.ai,US
+DOMAIN,support.claude.com,US
+
+# Auth / app support commonly used by Claude web and desktop flows
+DOMAIN-SUFFIX,auth0.com,US
+DOMAIN-SUFFIX,workos.com,US
+DOMAIN-SUFFIX,workoscdn.com,US
+DOMAIN-SUFFIX,intercom.io,US
+DOMAIN-SUFFIX,intercomcdn.com,US
+DOMAIN,cdn.usefathom.com,US
+DOMAIN,challenges.cloudflare.com,US
+DOMAIN,js.stripe.com,US

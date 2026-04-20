@@ -2,52 +2,77 @@
 # AUTHOR: tangjunhua1993
 # REPO: https://github.com/tangjunhua1993/rule
 # UPDATED: 2026-04-20
-# DESCRIPTION: Route GPT, Codex, and Cursor related hosts through SG policy group.
+# DESCRIPTION: Route GPT, ChatGPT, Codex, OpenAI API, and Cursor web/app/CLI hosts through SG policy group.
 # POLICY: SG
-# DOMAIN: 22
-# DOMAIN-SUFFIX: 18
-# TOTAL: 40
+# DOMAIN: 36
+# DOMAIN-SUFFIX: 25
+# TOTAL: 61
 
-# OpenAI / ChatGPT / Codex
+# OpenAI / ChatGPT / Codex core
 DOMAIN-SUFFIX,openai.com,SG
 DOMAIN-SUFFIX,chatgpt.com,SG
+DOMAIN-SUFFIX,auth.openai.com,SG
 DOMAIN-SUFFIX,oaistatic.com,SG
 DOMAIN-SUFFIX,oaiusercontent.com,SG
 DOMAIN-SUFFIX,openaimerge.com,SG
-DOMAIN-SUFFIX,auth.openai.com,SG
 DOMAIN-SUFFIX,featuregates.org,SG
-DOMAIN-SUFFIX,statsig.com,SG
-DOMAIN-SUFFIX,statsigapi.net,SG
-DOMAIN-SUFFIX,intercom.io,SG
-DOMAIN-SUFFIX,intercomcdn.com,SG
-DOMAIN-SUFFIX,workos.com,SG
-DOMAIN-SUFFIX,workoscdn.com,SG
+DOMAIN-SUFFIX,featureassets.org,SG
+DOMAIN-SUFFIX,prodregistryv2.org,SG
 DOMAIN,api.openai.com,SG
 DOMAIN,chat.openai.com,SG
 DOMAIN,chatgpt.com,SG
 DOMAIN,desktop.chat.openai.com,SG
 DOMAIN,ios.chat.openai.com,SG
 DOMAIN,android.chat.openai.com,SG
+DOMAIN,tcr9i.chat.openai.com,SG
 DOMAIN,cdn.oaistatic.com,SG
 DOMAIN,files.oaiusercontent.com,SG
 DOMAIN,cdn.openaimerge.com,SG
-DOMAIN,challenges.cloudflare.com,SG
+DOMAIN,auth0.openai.com,SG
+DOMAIN,setup.auth.openai.com,SG
+DOMAIN,chatgpt.livekit.cloud,SG
+
+# OpenAI / ChatGPT auth, analytics, messaging, upload, and app support
+DOMAIN-SUFFIX,ct.sendgrid.net,SG
+DOMAIN-SUFFIX,statsig.com,SG
+DOMAIN-SUFFIX,statsigapi.net,SG
+DOMAIN-SUFFIX,intercom.io,SG
+DOMAIN-SUFFIX,intercomcdn.com,SG
+DOMAIN-SUFFIX,workos.com,SG
+DOMAIN-SUFFIX,workoscdn.com,SG
+DOMAIN-SUFFIX,datadoghq.com,SG
+DOMAIN-SUFFIX,sentry.io,SG
 DOMAIN,events.statsigapi.net,SG
 DOMAIN,js.intercomcdn.com,SG
 DOMAIN,js.stripe.com,SG
+DOMAIN,cdn.workos.com,SG
+DOMAIN,images.workoscdn.com,SG
+DOMAIN,workos.imgix.net,SG
 DOMAIN,setup.workos.com,SG
 DOMAIN,forwarder.workos.com,SG
+DOMAIN,challenges.cloudflare.com,SG
+DOMAIN,humb.apple.com,SG
+DOMAIN,o207216.ingest.sentry.io,SG
+DOMAIN,o33249.ingest.sentry.io,SG
+DOMAIN,rum.browser-intake-datadoghq.com,SG
 
-# Cursor
+# Cursor core
 DOMAIN-SUFFIX,cursor.com,SG
 DOMAIN-SUFFIX,cursor.sh,SG
 DOMAIN-SUFFIX,cursor-cdn.com,SG
 DOMAIN-SUFFIX,cursorapi.com,SG
-DOMAIN-SUFFIX,todesktop.com,SG
+DOMAIN-SUFFIX,trycursor.com,SG
+DOMAIN-SUFFIX,anysphere.co,SG
 DOMAIN,api2.cursor.sh,SG
 DOMAIN,api3.cursor.sh,SG
 DOMAIN,api4.cursor.sh,SG
 DOMAIN,api5.cursor.sh,SG
 DOMAIN,repo42.cursor.sh,SG
+DOMAIN,us-asia.gcpp.cursor.sh,SG
+DOMAIN,us-eu.gcpp.cursor.sh,SG
+DOMAIN,us-only.gcpp.cursor.sh,SG
 DOMAIN,marketplace.cursorapi.com,SG
+
+# Cursor extension marketplace and update delivery
+DOMAIN-SUFFIX,todesktop.com,SG
 DOMAIN,download.todesktop.com,SG
