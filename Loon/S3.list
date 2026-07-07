@@ -1,2 +1,5 @@
+DOMAIN,fs.dig.kso
 DOMAIN,fs.dig.kso.net
 DOMAIN,fs.wps.kingsoft.net
+DOMAIN-SUFFIX,kso.net
+DOMAIN-SUFFIX,wps.kingsoft.net
