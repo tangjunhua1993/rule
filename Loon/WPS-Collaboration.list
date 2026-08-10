@@ -1,0 +1,27 @@
+# NAME: WPS-Collaboration
+# AUTHOR: tangjunhua1993
+# REPO: https://github.com/tangjunhua1993/rule
+# UPDATED: 2026-08-10
+# DESCRIPTION: Route WPS Collaboration and KDocs traffic directly in Loon.
+# POLICY: DIRECT
+
+# WPS Collaboration / KDocs core
+DOMAIN-SUFFIX,kdocs.cn,DIRECT
+DOMAIN-SUFFIX,wps.cn,DIRECT
+DOMAIN-SUFFIX,wpscdn.cn,DIRECT
+DOMAIN-SUFFIX,wpscdn.com,DIRECT
+DOMAIN-SUFFIX,qpws.cn,DIRECT
+DOMAIN-SUFFIX,kwps.cn,DIRECT
+
+# Kingsoft services and storage/CDN
+DOMAIN-SUFFIX,kingsoft.com,DIRECT
+DOMAIN-SUFFIX,ksord.com,DIRECT
+DOMAIN-SUFFIX,ksosoft.com,DIRECT
+DOMAIN-SUFFIX,kso.net,DIRECT
+DOMAIN-SUFFIX,ksyun.com,DIRECT
+DOMAIN-SUFFIX,ksyuncs.com,DIRECT
+DOMAIN-SUFFIX,wpsgo.com,DIRECT
+DOMAIN-SUFFIX,docer.com,DIRECT
+
+# WPS Collaboration backend observed on this Mac
+DOMAIN,kdocs.okhwl.mongodb.net,DIRECT
